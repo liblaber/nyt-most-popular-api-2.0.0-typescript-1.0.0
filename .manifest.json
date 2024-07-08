@@ -1,0 +1,154 @@
+{
+  "liblabVersion": "2.1.18",
+  "date": "2024-07-08T17:12:28.673Z",
+  "config": {
+    "specUrl": "./api-specs/tmp/nyt-most-popular.yaml",
+    "deliveryMethods": ["zip"],
+    "languages": ["typescript"],
+    "sdkName": "NYT Most Popular",
+    "sdkVersion": "1.0.0",
+    "baseUrl": "https://api.nytimes.com/svc/mostpopular/v2",
+    "includeOptionalSnippetParameters": false,
+    "authentication": {},
+    "auth": [],
+    "hooks": {
+      "enabled": true,
+      "sourceDir": "/tmp/resources/hooks"
+    },
+    "license": {
+      "type": "MIT",
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "path": "MIT.ejs"
+    },
+    "languageOptions": {
+      "typescript": {
+        "compilerOptions": {},
+        "bundle": true,
+        "npmName": "nyt-most-popular",
+        "additionalConstructorParameters": [
+          {
+            "name": "apiKey"
+          }
+        ]
+      }
+    },
+    "publishing": {
+      "githubOrg": "liblaber"
+    },
+    "environmentVariables": [],
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150,
+      "maxDelay": 5000,
+      "retryDelayJitter": 50,
+      "backOffFactor": 2,
+      "httpCodesToRetry": [408, 429, 500, 502, 503, 504],
+      "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+    },
+    "generateEnv": false,
+    "multiTenant": false,
+    "includeWatermark": false,
+    "inferServiceNames": false,
+    "usesFormData": false,
+    "privateRepo": false,
+    "reservedKeywords": [],
+    "githubRef": "",
+    "fileOutput": "/tmp",
+    "tempDir": "output",
+    "hooksLocation": {
+      "bucketKey": "hooks.zip",
+      "bucketName": "hooks-bucket"
+    },
+    "language": "typescript",
+    "deliveryMethod": "zip",
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "lib": ["es2017", "dom"]
+    },
+    "bundle": true,
+    "npmName": "nyt-most-popular",
+    "additionalConstructorParameters": [
+      {
+        "name": "apiKey"
+      }
+    ],
+    "typescriptVersion": "5.3.3",
+    "zodVersion": "3.22.0",
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.6.8"
+      },
+      "languages": ["typescript"]
+    },
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
+    },
+    "devContainer": false
+  },
+  "files": [
+    "package.json",
+    "tsconfig.json",
+    "examples/tsconfig.json",
+    "examples/package.json",
+    "examples/README.md",
+    "examples/src/index.ts",
+    "src/http/client.ts",
+    "src/http/serializer.ts",
+    "src/services/most-popular/models/get-emailed-period-json-ok-response.ts",
+    "src/services/most-popular/models/get-emailed-period-json-period.ts",
+    "src/services/most-popular/models/get-shared-period-json-ok-response.ts",
+    "src/services/most-popular/models/get-shared-period-json-period.ts",
+    "src/services/most-popular/models/get-shared-by-period-share-type-json-ok-response.ts",
+    "src/services/most-popular/models/get-shared-by-period-share-type-json-period.ts",
+    "src/services/most-popular/models/share-type.ts",
+    "src/services/most-popular/models/get-viewed-period-json-ok-response.ts",
+    "src/services/most-popular/models/get-viewed-period-json-period.ts",
+    "src/services/most-popular/models/emailed-article.ts",
+    "src/services/common/media.ts",
+    "src/services/common/media-metadata.ts",
+    "src/services/common/shared-article.ts",
+    "src/services/most-popular/models/viewed-article.ts",
+    ".gitignore",
+    "src/services/base-service.ts",
+    "src/index.ts",
+    "src/http/index.ts",
+    "src/services/most-popular/models/index.ts",
+    "src/services/common/index.ts",
+    "src/services/most-popular/index.ts",
+    "src/http/handlers/handler-chain.ts",
+    "src/http/types.ts",
+    "src/http/error.ts",
+    "src/http/handlers/terminating-handler.ts",
+    "src/http/handlers/hook-handler.ts",
+    "src/http/hooks/custom-hook.ts",
+    "src/http/hooks/hook.ts",
+    "src/http/handlers/retry-handler.ts",
+    "src/http/environment.ts",
+    "src/http/handlers/response-validation-handler.ts",
+    "./LICENSE",
+    "documentation/models/GetEmailedPeriodJsonOkResponse.md",
+    "documentation/models/GetEmailedPeriodJsonPeriod.md",
+    "documentation/models/GetSharedPeriodJsonOkResponse.md",
+    "documentation/models/GetSharedPeriodJsonPeriod.md",
+    "documentation/models/GetSharedByPeriodShareTypeJsonOkResponse.md",
+    "documentation/models/GetSharedByPeriodShareTypeJsonPeriod.md",
+    "documentation/models/ShareType.md",
+    "documentation/models/GetViewedPeriodJsonOkResponse.md",
+    "documentation/models/GetViewedPeriodJsonPeriod.md",
+    "documentation/models/EmailedArticle.md",
+    "documentation/models/Media.md",
+    "documentation/models/MediaMetadata.md",
+    "documentation/models/SharedArticle.md",
+    "documentation/models/ViewedArticle.md",
+    "src/http/handlers/request-validation-handler.ts",
+    "src/services/most-popular/most-popular.ts",
+    "documentation/services/MostPopularService.md",
+    "README.md"
+  ]
+}
