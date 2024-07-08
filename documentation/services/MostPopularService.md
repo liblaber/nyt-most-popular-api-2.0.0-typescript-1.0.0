@@ -20,7 +20,7 @@ Returns an array of the most emailed articles on NYTimes.com for specified perio
 
 | Name   | Type                                                                  | Required | Description                    |
 | :----- | :-------------------------------------------------------------------- | :------- | :----------------------------- |
-| period | [GetEmailedPeriodJsonPeriod](../models/GetEmailedPeriodJsonPeriod.md) | ✅       | Time period: 1, 7, or 30 days. |
+| period | [GetEmailedPeriodJsonPeriod](../models/GetEmailedPeriodJsonPeriod.md) | ✅        | Time period: 1, 7, or 30 days. |
 
 **Return Type**
 
@@ -29,16 +29,14 @@ Returns an array of the most emailed articles on NYTimes.com for specified perio
 **Example Usage Code Snippet**
 
 ```typescript
-import { NytMostPopular } from 'nyt-most-popular';
+import { NytMostPopular, GetEmailedPeriodJsonPeriod } from 'nyt-most-popular';
 
 (async () => {
   const nytMostPopular = new NytMostPopular({});
 
-  const period = GetEmailedPeriodJsonPeriod.1;
+  const period: GetEmailedPeriodJsonPeriod = '1';
 
-  const { data } = await nytMostPopular.mostPopular.getEmailedPeriodJson(
-
-);
+  const { data } = await nytMostPopular.mostPopular.getEmailedPeriodJson(period);
 
   console.log(data);
 })();
@@ -55,7 +53,7 @@ Returns an array of the most shared articles on NYTimes.com for specified period
 
 | Name   | Type                                                                | Required | Description                    |
 | :----- | :------------------------------------------------------------------ | :------- | :----------------------------- |
-| period | [GetSharedPeriodJsonPeriod](../models/GetSharedPeriodJsonPeriod.md) | ✅       | Time period: 1, 7, or 30 days. |
+| period | [GetSharedPeriodJsonPeriod](../models/GetSharedPeriodJsonPeriod.md) | ✅        | Time period: 1, 7, or 30 days. |
 
 **Return Type**
 
@@ -64,16 +62,14 @@ Returns an array of the most shared articles on NYTimes.com for specified period
 **Example Usage Code Snippet**
 
 ```typescript
-import { NytMostPopular } from 'nyt-most-popular';
+import { NytMostPopular, GetEmailedPeriodJsonPeriod } from 'nyt-most-popular';
 
 (async () => {
   const nytMostPopular = new NytMostPopular({});
 
-  const period = GetSharedPeriodJsonPeriod.1;
+  const period: GetEmailedPeriodJsonPeriod = '1';
 
-  const { data } = await nytMostPopular.mostPopular.getSharedPeriodJson(
-
-);
+  const { data } = await nytMostPopular.mostPopular.getSharedPeriodJson(period);
 
   console.log(data);
 })();
@@ -90,8 +86,8 @@ Returns an array of the most shared articles by share type on NYTimes.com for sp
 
 | Name      | Type                                                                                      | Required | Description                    |
 | :-------- | :---------------------------------------------------------------------------------------- | :------- | :----------------------------- |
-| period    | [GetSharedByPeriodShareTypeJsonPeriod](../models/GetSharedByPeriodShareTypeJsonPeriod.md) | ✅       | Time period: 1, 7, or 30 days. |
-| shareType | [ShareType](../models/ShareType.md)                                                       | ✅       | Share type: facebook.          |
+| period    | [GetSharedByPeriodShareTypeJsonPeriod](../models/GetSharedByPeriodShareTypeJsonPeriod.md) | ✅        | Time period: 1, 7, or 30 days. |
+| shareType | [ShareType](../models/ShareType.md)                                                       | ✅        | Share type: facebook.          |
 
 **Return Type**
 
@@ -128,7 +124,7 @@ Returns an array of the most viewed articles on NYTimes.com for specified period
 
 | Name   | Type                                                                | Required | Description                    |
 | :----- | :------------------------------------------------------------------ | :------- | :----------------------------- |
-| period | [GetViewedPeriodJsonPeriod](../models/GetViewedPeriodJsonPeriod.md) | ✅       | Time period: 1, 7, or 30 days. |
+| period | [GetViewedPeriodJsonPeriod](../models/GetViewedPeriodJsonPeriod.md) | ✅        | Time period: 1, 7, or 30 days. |
 
 **Return Type**
 
